@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Business Name</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1518608022029-1ff3b7f1b462?crop=entropy&cs=tinysrgb&fit=max&fm=jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            animation: slideIn 1.2s forwards;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #555;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        h2 {
+            margin: 20px 0;
+            font-size: 2rem;
+        }
+
+        .about img,
+        .services img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: transform 0.3s;
+        }
+
+        .about img:hover,
+        .services img:hover {
+            transform: scale(1.05);
+        }
+
+        .service {
+            margin: 20px 0;
+            animation: bounce 1s forwards;
+            opacity: 0;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 300px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .testimonial {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .faq {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq h3 {
+            margin-top: 15px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .faq p {
+            display: none;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        @media (min-width: 768px) {
+            .services {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .service {
+                flex: 1;
+                margin: 10px;
+                min-width: 250px;
+                animation-delay: 0.2s;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div>
+            <h1>Transform Your Business</h1>
+            <p>Innovative solutions for a changing world.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing top-notch services that cater to your business needs. Our team is passionate about delivering results that drive growth.</p>
+        <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg" alt="About Us Image">
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Consulting Services</h3>
+            <p>Our experts provide tailored consulting to help your business grow and thrive.</p>
+            <img src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg" alt="Consulting Service">
+        </div>
+        <div class="service">
+            <h3>Technology Solutions</h3>
+            <p>We offer cutting-edge technology solutions to streamline your operations.</p>
+            <img src="https://images.pexels.com/photos/3861962/pexels-photo-3861962.jpeg" alt="Technology Solution">
+        </div>
+        <div class="service">
+            <h3>Marketing Strategy</h3>
+            <p>Our marketing strategies are designed to engage your audience effectively.</p>
+            <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg" alt="Marketing Strategy">
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <blockquote>"A game changer for our company!" - Client A</blockquote>
+        </div>
+        <div class="testimonial">
+            <blockquote>"Exceptional service and results." - Client B</blockquote>
+        </div>
+        <div class="testimonial">
+            <blockquote>"They really understand our needs." - Client C</blockquote>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3 onclick="toggleAnswer(this)">What services do you offer?</h3>
+        <p>We provide consulting, technology solutions, and marketing strategies tailored to your needs.</p>
+        <h3 onclick="toggleAnswer(this)">How can I contact you?</h3>
+        <p>You can fill out the contact form below or reach us via email at info@yourbusiness.com.</p>
+        <h3 onclick="toggleAnswer(this)">What industries do you serve?</h3>
+        <p>We work with various industries including technology, healthcare, and finance.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Phone: (123) 456-7890 | Email: info@yourbusiness.com</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Your Business Name. All Rights Reserved.</p>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
+    <script>
+        function toggleAnswer(element) {
+            const nextElement = element.nextElementSibling;
+            if (nextElement.style.display === "block") {
+                nextElement.style.display = "none";
+            } else {
+                nextElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
